@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/academy?useTimezone=true&amp;serverTimezone=UTC</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Teste01</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hbm2ddl.auto">update</property>
+
+        <mapping class="database.models.user.User"/>
+        <mapping class="database.models.address.Address"/>
+        <mapping class="database.models.address.City"/>
+        <mapping class="database.models.address.State"/>
+        <mapping class="database.models.modality.Graduation"/>
+        <mapping class="database.models.modality.Modality"/>
+        <mapping class="database.models.modality.Student"/>
+        <mapping class="database.models.period.Period"/>
+        <mapping class="database.models.payment.Payment"/>
+    </session-factory>
+</hibernate-configuration>
